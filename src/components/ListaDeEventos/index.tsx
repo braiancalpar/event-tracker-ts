@@ -1,8 +1,8 @@
 import React from "react";
+import useListaDeEventos from "../../state/hooks/useListaDeEventos";
 import Evento from "../Evento";
 import Filtro from "../Filtro";
 import style from "./ListaDeEventos.module.scss";
-import useListaDeEventos from "../../state/hooks/useListaDeEventos";
 
 const ListaDeEventos: React.FC = () => {
   const eventos = useListaDeEventos();

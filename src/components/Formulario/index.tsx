@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import style from "./Formulario.module.scss";
 import useAdicionarEvento from "../../state/hooks/useAdicionarEvento";
+import style from "./Formulario.module.scss";
 
 const Formulario: React.FC = () => {
   const adicionarEvento = useAdicionarEvento();
@@ -18,7 +18,6 @@ const Formulario: React.FC = () => {
 
   const submeterForm = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-
     try {
       const evento = {
         descricao,
@@ -26,9 +25,7 @@ const Formulario: React.FC = () => {
         fim: montarData(dataFim, horaFim),
         completo: false,
       };
-
       adicionarEvento(evento);
-
       setDescricao("");
       setDataInicio("");
       setHoraInicio("");

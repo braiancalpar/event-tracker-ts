@@ -1,8 +1,8 @@
 import React, { useState } from "react";
-import style from "./Filtro.module.scss";
 import { useSetRecoilState } from "recoil";
 import { IFiltroDeEventos } from "../../interfaces/IFiltroDeEventos";
 import { filtroDeEventos } from "../../state/atom";
+import style from "./Filtro.module.scss";
 
 const Filtro: React.FC = () => {
   const [data, setData] = useState("");
