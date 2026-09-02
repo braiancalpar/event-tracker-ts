@@ -3,9 +3,9 @@ import { IEvento } from "../../interfaces/IEvento";
 import { listaDeEventosState } from "../atom";
 
 const useDeletarEvento = () => {
-  const setListaDeEventos = useSetRecoilState<IEvento[]>(listaDeEventosState);
+  const setListaEventos = useSetRecoilState<IEvento[]>(listaDeEventosState);
   return (evento: IEvento) => {
-    setListaDeEventos((listaAntiga) => [
+    setListaEventos((listaAntiga) => [
       ...listaAntiga.filter((evt) => evento.id !== evt.id),
     ]);
   };
