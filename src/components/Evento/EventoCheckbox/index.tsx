@@ -13,7 +13,7 @@ const EventoCheckbox: React.FC<{ evento: IEvento }> = ({ evento }) => {
     eventoAlterado.completo = !eventoAlterado.completo;
 
     setListaDeEventos((listaAntiga) => {
-      const indice = listaAntiga.findIndex((evt) => evt.id === eventoAlterado.id);
+      const indice = listaAntiga.findIndex((evt) => evt.id === evento.id);
       return [
         ...listaAntiga.slice(0, indice),
         eventoAlterado,
