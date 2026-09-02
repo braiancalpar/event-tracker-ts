@@ -22,7 +22,7 @@ const Formulario: React.FC = () => {
   const submeterForm = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     const evento = {
-      id: obterId,
+      id: obterId(),
       descricao,
       inicio: montarData(dataInicio, horaInicio),
       fim: montarData(dataFim, horaFim),
